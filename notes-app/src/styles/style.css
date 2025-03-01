@@ -1,0 +1,84 @@
+/* Warna dasar menggunakan palet dari colorhunt.co */
+:root {
+  --primary: #2b2e4a;
+  --secondary: #e84545;
+  --accent: #903749;
+  --light: #eeeeee;
+}
+
+/* Reset CSS dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--light);
+  padding: 20px;
+}
+
+/* Grid layout untuk catatan */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 480px) {
+  .notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+note-form {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.note-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+button {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--accent);
+}
+
+.error-message {
+  color: var(--secondary);
+  font-size: 0.8em;
+}
